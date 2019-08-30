@@ -11,6 +11,9 @@
 1ページに複数のフォームがあっても，効率的にダブルクリックを拒否したい．
 - resources/views/memos/index.blade.php は 1ページ・1フォーム
 - resources/views/commentsmemos/index.blade.php は 1ページ・2フォーム
+結果的には，次のやり方が万能で簡単にダブルクリックを拒否できる．
+- app/Http/Controllers/AllroundsController.php
+- resources/views/allrounds/index.blade.php
 
 ## About Laravel
 
