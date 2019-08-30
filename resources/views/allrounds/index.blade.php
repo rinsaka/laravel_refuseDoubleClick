@@ -4,6 +4,17 @@
   <meta charset='utf-8'>
   <title>Comments</title>
 
+  <script>
+  var btn_submitted = 0;
+  function checkDoubleClick() {
+    if (btn_submitted > 0) {
+      return false;
+    } else {
+      btn_submitted = 1;
+      return true;
+    }
+  }
+  </script>
 
 </head>
 <body>
@@ -13,7 +24,7 @@
   </p>
   <h2>Comments</h2>
   <div>
-    <form method="post" action="{{ url('/allrounds/comments') }}">
+    <form method="post" action="{{ url('/allrounds/comments') }}" onsubmit="return checkDoubleClick();">
         @csrf
         <p>
             <label for="comment">Comment: </label>
@@ -32,7 +43,7 @@
 
   <h2>Memos</h2>
   <div>
-    <form method="post" action="{{ url('/allrounds/memos') }}">
+    <form method="post" action="{{ url('/allrounds/memos') }}" onsubmit="return checkDoubleClick();" >
         @csrf
         <p>
             <label for="memo">Memo: </label>
