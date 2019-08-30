@@ -18,6 +18,6 @@ class MemosController extends Controller
     $memo = new Memo();
     $memo->memo = $request->memo;
     $memo->save();
-    return redirect('memos');
+    return redirect('/memos');
   }
 }
