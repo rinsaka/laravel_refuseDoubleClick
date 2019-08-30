@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Memo;
 
 class MemosController extends Controller
 {
   public function index()
   {
-    dd('Memos');
+    $memos = Memo::orderBy('created_at', 'desc')->get();
+    return view('memos.index')->with('memos', $memos);
   }
 }
