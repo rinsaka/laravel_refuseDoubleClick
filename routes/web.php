@@ -25,3 +25,5 @@ Route::post('/commentsmemos/comments', 'CommentsMemosController@comment_store');
 Route::post('/commentsmemos/memos', 'CommentsMemosController@memo_store');
 
 Route::get('/allrounds', 'AllroundsController@index');
+Route::post('/allrounds/comments', 'AllroundsController@comment_store');
+Route::post('/allrounds/memos', 'AllroundsController@memo_store');

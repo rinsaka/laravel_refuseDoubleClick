@@ -16,4 +16,19 @@ class AllroundsController extends Controller
             ->with('comments', $comments)
             ->with('memos', $memos);
   }
+  public function comment_store(Request $request)
+  {
+    $comment = new Comment();
+    $comment->comment = $request->comment;
+    $comment->save();
+    return redirect('/allrounds');
+  }
+
+  public function memo_store(Request $request)
+  {
+    $memo = new Memo();
+    $memo->memo = $request->memo;
+    $memo->save();
+    return redirect('/allrounds');
+  }
 }

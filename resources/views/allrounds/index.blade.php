@@ -12,7 +12,18 @@
     ページ内に複数のフォーム（やサブミットボタン）があっても，効率的にダブルクリックを拒否したい．
   </p>
   <h2>Comments</h2>
-
+  <div>
+    <form method="post" action="{{ url('/allrounds/comments') }}">
+        @csrf
+        <p>
+            <label for="comment">Comment: </label>
+            <input type="text" name="comment" id="comment" value="" required>
+        </p>
+        <p>
+            <input type="submit" value="投稿">
+        </p>
+    </form>
+  </div>
   <ul>
     @foreach ($comments as $comment)
       <li>{{ $comment->created_at }} | {{ $comment->comment }}</li>
@@ -21,7 +32,17 @@
 
   <h2>Memos</h2>
   <div>
-
+    <form method="post" action="{{ url('/allrounds/memos') }}">
+        @csrf
+        <p>
+            <label for="memo">Memo: </label>
+            <input type="text" name="memo" id="memo" value="" required>
+        </p>
+        <p>
+            <input type="submit" value="投稿">
+        </p>
+    </form>
+  </div>
   <ul>
     @foreach ($memos as $memo)
       <li>{{ $memo->created_at }} | {{ $memo->memo }}</li>
