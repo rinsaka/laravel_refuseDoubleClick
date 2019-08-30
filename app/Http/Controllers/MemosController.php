@@ -6,5 +6,8 @@ use Illuminate\Http\Request;
 
 class MemosController extends Controller
 {
-  //
+  public function index()
+  {
+    dd('Memos');
+  }
 }
