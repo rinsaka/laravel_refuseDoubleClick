@@ -83,8 +83,11 @@
                 </div>
 
                 <div class="links">
-                  <a href="{{ action('CommentsController@index') }}">Comments</a>
-                  <a href="{{ action('MemosController@index') }}">Memos</a>
+                  <a href="{{ action('CommentsController@index') }}">Comments（ダブルクリック可能）</a>
+                  <a href="{{ action('MemosController@index') }}">Memos（ダブルクリック拒否）</a>
+                </div>
+                <div class="links">
+                  <a href="{{ action('CommentsMemosController@index') }}">両方</a>
                 </div>
             </div>
         </div>
