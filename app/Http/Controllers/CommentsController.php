@@ -12,4 +12,12 @@ class CommentsController extends Controller
     $comments = Comment::orderBy('created_at', 'desc')->get();
     return view('comments.index')->with('comments', $comments);
   }
+
+  public function store(Request $request)
+  {
+    $comment = new Comment();
+    $comment->comment = $request->comment;
+    $comment->save();
+    return redirect('/comments');
+  }
 }

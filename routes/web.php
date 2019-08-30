@@ -16,4 +16,5 @@ Route::get('/', function () {
 });
 
 Route::get('/comments', 'CommentsController@index');
+Route::post('/comments', 'CommentsController@store');
 Route::get('/memos', 'MemosController@index');
